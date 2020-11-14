@@ -1,7 +1,6 @@
 public class Main {
 
     public static void main(String[] args) {
-
         int highScore = returnScore(true, 10000, 4, 300);
         displayHighScorePosition("Kyle", calculateHighScorePosition(1500));
     }
