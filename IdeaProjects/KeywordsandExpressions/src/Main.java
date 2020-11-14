@@ -4,9 +4,6 @@ public class Main {
 
         int highScore = returnScore(true, 10000, 4, 300);
         displayHighScorePosition("Kyle", calculateHighScorePosition(1500));
-        displayHighScorePosition("Tom", calculateHighScorePosition(900));
-        displayHighScorePosition("Phil", calculateHighScorePosition(400));
-        displayHighScorePosition("Thea", calculateHighScorePosition(50));
     }
 
     public static void displayHighScorePosition (String name, int position) {
@@ -14,26 +11,16 @@ public class Main {
     }
 
     public static int calculateHighScorePosition(int score) {
-//        if (score >= 1000) {
-//            return 1;
-//        } else if (score >= 500) {
-//            return 2;
-//        } else if (score >= 100){
-//            return 3;
-//        }
-//        return 4;
-        int position = 4;
-
-         if (score >= 1000) {
-            position = 1;
-        } else if (score >= 500) {
-            position = 2;
-        } else if (score >= 100){
-           position = 3;
+        if (score > 1000) {
+            return 1;
+        } else if (score > 500 && score < 1000) {
+            return 2;
+        } else if (score > 100 && score <= 500){
+            return 3;
         }
-        return position;
+
+        return 4;
     }
-    
     public static void calculateScore(boolean gameOver, int score, int level, int bonus) {
 
         if (gameOver) {
